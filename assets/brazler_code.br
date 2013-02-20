@@ -1,0 +1,26 @@
+se 1 < 10
+	mostre 3
+	mostre 52
+fim
+
+int i
+i = 0
+
+para i < 10
+	mostre i
+	i = i + 1
+fim
+
+para i < 10
+	para j < 5
+		mostre 10
+	fim
+fim
+
+
+# Bonus
+int i = 5
+enquanto i > 0
+	mostre i
+	i = i - 1
+fim
