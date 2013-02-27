@@ -26,6 +26,7 @@ module Brazler
 
 			return case code
 				when :if then {code: code, value1: vars[1], op: vars[2], value2: vars[3], exp: vars[0]}
+				when :for then {code: code, value1: vars[1], value2: vars[2], exp: vars[0]}
 				when :var then {code: code}
 				when :end then {code: code}
 				when :mostre then {code: code, value1: vars[1], exp: vars[0]}
@@ -45,6 +46,7 @@ module Brazler
 	def self.operations
 		{
 			:if => /^se\s+(\d+)\s+(<|>|==)\s+(\d+)$/i,
+			:for => /^para\s+(\d+)\s+ate\s+(\d+)$/i,
 			:var => /^int\s+(\w)$/,
 			:atribuicao => /^(\w)\s*\=\s*(\d+)$/,
 			:var_com_atribuicao => /^int\s+(\w)\s*\=\s*(\d+)$/,
